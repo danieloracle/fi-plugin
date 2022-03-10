@@ -66,7 +66,7 @@ define(['N/https', 'N/search', 'N/url'],
             // Example 2: BAI2 file
             // ------------
             var downloadedData =
-            "chr01,BANKOFAMERICA,cas72068,181108,1330,1,80,1,2\n"+
+            "01,BANKOFAMERICA,cas72068,181108,1330,1,80,1,2\n"+
             "02,cas72068,071000039,1,190109,2359,,2\n"+
             "03,9999999999,USD\n"+
             "16,165,25000,Z,965710090000149,004646894728\n"+

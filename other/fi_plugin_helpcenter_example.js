@@ -51,7 +51,7 @@
                  var accountId = accountRequest.accountMappingKey;
                  var fromDateTime = accountRequest.dataStartTime;
                  var toDateTime = accountRequest.dataEndTime;
-
+                
                  var downloadedData = "... Retrieve the account data using a web service request or a file transfer...";
 
                  context.addDataChunk({dataChunk: downloadedData});
