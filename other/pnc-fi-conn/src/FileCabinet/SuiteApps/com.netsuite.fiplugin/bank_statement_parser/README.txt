@@ -1,0 +1,1 @@
+Only for reference of camt053, the correct parser file type is fiParserPlugin

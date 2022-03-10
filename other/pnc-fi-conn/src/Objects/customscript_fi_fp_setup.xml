@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_fi_fp_setup">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>FI_FP Setup</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteApps/com.netsuite.fiplugin/fi_fp_setup.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_fi_fp_setup">
+      <allemployees>T</allemployees>
+      <allpartners>T</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole></runasrole>
+      <status>RELEASED</status>
+      <title>FI_FP Setup</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

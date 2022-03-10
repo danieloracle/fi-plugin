@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_fi_iframe_sl_example">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>FakeBank iFrame</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteApps/com.sdnsolutionsengineering.ficonnectivityplugin/fi_iframe_sl_example.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_se_sl_iframe">
+      <allemployees>T</allemployees>
+      <allpartners>T</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>T</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole></runasrole>
+      <status>RELEASED</status>
+      <title>FakeBank iFrame</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>
