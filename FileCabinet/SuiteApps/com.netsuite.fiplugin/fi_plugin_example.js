@@ -3,26 +3,34 @@
  * @NScriptType fiConnectivityPlugin
  * @NModuleScope SameAccount
  */
-define(['N/https', 'N/search'],
-    function (https, search)
+define(['N/https', 'N/search', 'N/url'],
+    function (https, search, url)
     {
         function getConfigurationIFrameUrl(context)
         {
-            log.debug("getConfigurationIFrameUrl", "Loading iFrame");
-            // Hardcoded url for testing, should use url.resolveScript: https://netsuite.custhelp.com/app/answers/detail/a_id/44705
-            context.configurationIFrameUrl = "https://tstdrv2043981.extforms.netsuite.com/app/site/hosting/scriptlet.nl?script=651&deploy=1&compid=TSTDRV2043981&h=bb36c81f418fabe491ac";
+            // // Show format profile configurationId
+            // var configurationId = context.pluginConfiguration.getConfigurationFieldValue({fieldName: "configuration_id"});
+            // log.debug("getConfigurationFieldValue", "configurationId: " + configurationId);
+            //
+            var output = url.resolveScript({
+                scriptId: 'customscript_fi_iframe_example',
+                deploymentId: 'customdeploy_fi_iframe',
+                returnExternalUrl: true
+            });
+            log.debug("getConfigurationIFrameUrl", "Loading iFrame: " + output);
+            context.configurationIFrameUrl = output;
         }
 
         function getAccounts(context)
         {
             log.debug("getAccounts", "Getting customers accounts from Bank");
             context.addAccount({
-                accountMappingKey: "CHECKING 0002153851",
-                displayName: "Checking (XXXX11)",
+                accountMappingKey: "CHECKING 0002153852",
+                displayName: "Checking (XXXX12)",
                 accountType: "BANK",
                 currency: "USD",
-                groupName: "Example Bank",
-                lastUpdated: "2020-06-30T01:23:45"
+                groupName: "Oracle Bank",
+                lastUpdated: "2022-03-08T01:23:45"
             });
         }
 
