@@ -1,7 +1,3 @@
-# Error
-![alt text](other/img/error1.png)
-
-
 # Setup
 #### Customization > Plug-ins > Manage Plug-ins
 - Enable plugin
