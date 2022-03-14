@@ -26,7 +26,7 @@ define(['N/https', 'N/search', 'N/url'],
             log.debug("getAccounts", "Getting customers accounts from Bank");
             context.addAccount({
                 accountMappingKey: "000000001",
-                displayName: "Checking (000000001)",
+                displayName: "000000001",
                 accountType: "BANK",
                 currency: "USD",
                 groupName: "Oracle Bank",
@@ -61,19 +61,6 @@ define(['N/https', 'N/search', 'N/url'],
             //         context.addDataChunk({dataChunk: downloadedData});
             //     });
             // }
-
-            // Example 2: BAI2 file
-            // --------------------
-            // error: "Version Number" has an invalid field data: "2/02"
-            var downloadedData =
-            "01,BANKOFAMERICA,cas72068,181108,1330,1,80,1,2/"+
-            "02,cas72068,071000039,1,190109,2359,,2/"+
-            "03,000000001,USD/"+
-            "16,165,25000,Z,965710090000149,004646894728/"+
-            "88,ME CTRL DIS 004646894728 CR/"+
-            "49,25000,4/"+
-            "98,25000,1,6/"+
-    		"99,25000,1,8/";
 
             // Example 2b: BAI2 file
             // ---------------------
@@ -323,7 +310,18 @@ define(['N/https', 'N/search', 'N/url'],
             "99,52799949510,1,123/";
             
 
-
+            // Example 2: BAI2 file
+            // --------------------
+            // error: "Version Number" has an invalid field data: "2/02"
+            var downloadedData =
+            "01,BANKOFAMERICA,cas72068,181108,1330,1,80,1,2/"+
+            "02,cas72068,071000039,1,190109,2359,,2/"+
+            "03,000000001,USD/"+
+            "16,165,25000,Z,965710090000149,004646894728/"+
+            "88,ME CTRL DIS 004646894728 CR/"+
+            "49,25000,4/"+
+            "98,25000,1,6/"+
+            "99,25000,1,8/";
 
             log.debug("downloadedData", downloadedData);
             context.addDataChunk({dataChunk: downloadedData});
