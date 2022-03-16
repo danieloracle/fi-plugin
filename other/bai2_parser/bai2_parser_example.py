@@ -19,47 +19,54 @@ bai2_file.header.creation_time = now
 bai2_file.header.physical_record_length = 80
 bai2_file.header.block_size = 1
 
+# Group info:
+currency = 'USD'
+group_index = 0
 
 bai2_file.children.append(models.Group())
-bai2_file.children[0].header.originator_id = 'ORABANK'
-bai2_file.children[0].header.currency = 'USD'
-bai2_file.children[0].header.group_status = constants.GroupStatus.test_only
-bai2_file.children[0].header.as_of_date = now
-bai2_file.children[0].header.as_of_time = now
-bai2_file.children[0].header.originator_id = '071000039'
-bai2_file.children[0].header.ultimate_receiver_id = 'cas72068'
+bai2_file.children[group_index].header.originator_id = 'ORABANK'
+bai2_file.children[group_index].header.currency = currency
+bai2_file.children[group_index].header.group_status = constants.GroupStatus.test_only
+bai2_file.children[group_index].header.as_of_date = now
+bai2_file.children[group_index].header.as_of_time = now
+bai2_file.children[group_index].header.originator_id = '071000039'
+bai2_file.children[group_index].header.ultimate_receiver_id = 'cas72068'
 
-
-# Account info:
+# Account 1:
 currency = 'USD'
 customer_account_number = '9999999999'
+account_index = 0
 
-# Transaction 0
+transactions = [
+    models.TransactionDetail(amount=4444, bank_reference='123345'),
+    models.TransactionDetail(amount=55555, bank_reference='999902')
+    ]
+# Transaction
+bai2_file.children[group_index].children.append(models.Account(children=transactions))
+bai2_file.children[group_index].children[account_index].header.currency = currency
+bai2_file.children[group_index].children[account_index].header.customer_account_number = customer_account_number
 transaction_index = 0
-amount = 4444
-bank_reference = '123345'
-transactions = [models.TransactionDetail(amount=amount, bank_reference=bank_reference)]
-bai2_file.children[0].children.append(models.Account(children=transactions))
-bai2_file.children[0].children[transaction_index].header.currency = currency
-bai2_file.children[0].children[transaction_index].header.customer_account_number = customer_account_number
-bai2_file.children[0].children[transaction_index].children[0].type_code = constants.TypeCode(code='165', description='Preauthorized ACH Credit', level=constants.TypeCodeLevel.detail, transaction=constants.TypeCodeTransaction.credit)
-
-# Transaction 1
+bai2_file.children[group_index].children[account_index].children[transaction_index].type_code = constants.TypeCode(code='165', description='Preauthorized ACH Credit', level=constants.TypeCodeLevel.detail, transaction=constants.TypeCodeTransaction.credit)
 transaction_index = 1
-amount = 55555
-bank_reference = '55555'
-transactions = [models.TransactionDetail(amount=amount, bank_reference=bank_reference)]
-bai2_file.children[0].children.append(models.Account(children=transactions))
-bai2_file.children[0].children[transaction_index].header.currency = currency
-bai2_file.children[0].children[transaction_index].header.customer_account_number = customer_account_number
-bai2_file.children[0].children[transaction_index].children[0].type_code = constants.TypeCode(code='165', description='Preauthorized ACH Credit', level=constants.TypeCodeLevel.detail, transaction=constants.TypeCodeTransaction.credit)
-
-# transactions2 = [models.TransactionDetail(amount=101, bank_reference='123345')]
+bai2_file.children[group_index].children[account_index].children[transaction_index].type_code = constants.TypeCode(code='165', description='Preauthorized ACH Credit', level=constants.TypeCodeLevel.detail, transaction=constants.TypeCodeTransaction.credit)
 
 
-# bai2_file.children[0].children.append(models.Account(children=transactions2))
-# bai2_file.children[0].children[1].header.currency = currency
-# bai2_file.children[0].children[1].header.customer_account_number = customer_account_number
+# ACOUNT 2
+currency = 'USD'
+customer_account_number = '000001'
+account_index = 1
+
+transactions = [
+    models.TransactionDetail(amount=11111, bank_reference='11111'),
+    models.TransactionDetail(amount=12222, bank_reference='12222')
+    ]
+bai2_file.children[group_index].children.append(models.Account(children=transactions))
+bai2_file.children[group_index].children[account_index].header.currency = currency
+bai2_file.children[group_index].children[account_index].header.customer_account_number = customer_account_number
+transaction_index = 0
+bai2_file.children[group_index].children[account_index].children[transaction_index].type_code = constants.TypeCode(code='165', description='Preauthorized ACH Credit', level=constants.TypeCodeLevel.detail, transaction=constants.TypeCodeTransaction.credit)
+transaction_index = 1
+bai2_file.children[group_index].children[account_index].children[transaction_index].type_code = constants.TypeCode(code='165', description='Preauthorized ACH Credit', level=constants.TypeCodeLevel.detail, transaction=constants.TypeCodeTransaction.credit)
 
 
 # write to string
