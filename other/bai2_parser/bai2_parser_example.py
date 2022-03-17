@@ -73,8 +73,15 @@ bai2_file.children[group_index].children[account_index].children[transaction_ind
 output = bai2.write(bai2_file)
 print(output)
 
-clip.copy(f"{output}")
 
 text_file = open("output.txt", "w")
 n = text_file.write(output)
 text_file.close()
+
+
+
+"Convierto texto a inlinehtml"
+ret = ''
+for l in output.splitlines():
+    ret = ret + '"' + l + '\\n"+' + '\n'
+clip.copy(f"{ret}")

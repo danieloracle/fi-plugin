@@ -33,8 +33,8 @@ define(['N/https', 'N/search', 'N/url'],
                 lastUpdated: "2022-03-08T01:23:45"
             });
             context.addAccount({
-                accountMappingKey: "CHECKING 222222222",
-                displayName: "Checking (XXXX22)",
+                accountMappingKey: "000001",
+                displayName: "000001",
                 accountType: "BANK",
                 currency: "USD",
                 groupName: "Oracle Bank",
@@ -65,16 +65,30 @@ define(['N/https', 'N/search', 'N/url'],
             // Example 2: BAI2 file
             // --------------------
             // error: "Version Number" has an invalid field data: "2/02"
-            var downloadedData =
-            "01,BANKOFAMERICA,cas72068,181108,1330,1,80,1,2/\n"+
-            "02,cas72068,071000039,1,190109,2359,,2/\n"+
-            "03,9999999999,USD/\n"+
-            "16,165,25000,Z,965710090000149,004646894728/\n"+
-            "88,ME CTRL DIS 004646894728 CR/\n"+
-            "49,25000,4/\n"+
-            "98,25000,1,6/\n"+
-            "99,25000,1,8/\n";
+            // var downloadedData =
+            // "01,BANKOFAMERICA,cas72068,181108,1330,1,80,1,2/\n"+
+            // "02,cas72068,071000039,1,190109,2359,,2/\n"+
+            // "03,9999999999,USD/\n"+
+            // "16,165,25000,Z,965710090000149,004646894728/\n"+
+            // "88,ME CTRL DIS 004646894728 CR/\n"+
+            // "49,25000,4/\n"+
+            // "98,25000,1,6/\n"+
+            // "99,25000,1,8/\n";
 
+            var downloadedData =
+            "01,ORABANK,NETSUITE,220316,0945,fileid123,80,1,2/\n"+
+            "02,cas72068,071000039,4,220316,0945,USD,/\n"+
+            "03,9999999999,USD/\n"+
+            "16,165,4444,,123345,,\n"+
+            "16,165,55555,,999902,,\n"+
+            "49,59999,4/\n"+
+            "03,000001,USD/\n"+
+            "16,165,11111,,11111,,\n"+
+            "16,165,12222,,12222,,\n"+
+            "49,23333,4/\n"+
+            "98,83332,2,10/\n"+
+            "99,83332,1,12/\n";
+            
             log.debug("downloadedData", downloadedData);
             context.addDataChunk({dataChunk: downloadedData});
             context.returnAccountRequestsJSON({accountsJson: context.accountRequestsJSON});

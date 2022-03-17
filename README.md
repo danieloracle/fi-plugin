@@ -1,3 +1,7 @@
+# Problems
+- 60 min limitation
+- automatic import scheduled time
+
 # Setup
 #### Customization > Plug-ins > Manage Plug-ins
 - Enable plugin
