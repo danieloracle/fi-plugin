@@ -1,6 +1,6 @@
 # Status
 ## Issues / Enhancement list:
-- Issue: 
+- Issue:
     - 592360 FI Connectivity Plugin - automated daily import schedule to be customizable
     https://nlcorp.app.netsuite.com/app/crm/support/issuedb/issue.nl?id=86150277
 - Description: 
@@ -12,6 +12,9 @@
     - Case list: ...
     - PM response about Enhancement: ...
 
+
+
+
 - Case:
     - Bank Feed - Match Bank Data > Update Imported Transaction Button > “A bank data import was not initiated because NetSuite can only import data from a financial institution every 60 minutes. Your data will be imported at the next scheduled import 7018799 Euroz Hartleys Limited
     https://nlcorp.app.netsuite.com/app/crm/support/supportcase.nl?id=110588307&whence=
@@ -20,7 +23,6 @@
     Purpose: Customer would like to trigger bank import for their connection - Westpac Business but receives error upon rebuilding. As per recent update in Salt Edge due to changes in Bank Interface, they now require daily refresh/rebuild connection to trigger fetching of transactions.
     Impact: Since it is now required to rebuild connection to trigger fetching transactions in Salt Edge for connections in Westpac Australia and users are having issues with rebuilding connection, they are not able to proceed and trigger the import Users are not able to fully utilize the features of SuiteApp because of the error and would have to manually import which defeats purpose of Bank Feeds
     RN July 13,2021
-
 
 
 
@@ -40,6 +42,8 @@
             Purpose: Customer would like to trigger bank import for their connection - Westpac Business but receives error upon rebuilding. As per recent update in Salt Edge due to changes in Bank Interface, they now require daily refresh/rebuild connection to trigger fetching of transactions.
             Impact: Since it is now required to rebuild connection to trigger fetching transactions in Salt Edge for connections in Westpac Australia and users are having issues with rebuilding connection, they are not able to proceed and trigger the import Users are not able to fully utilize the features of SuiteApp because of the error and would have to manually import which defeats purpose of Bank Feeds
             RN July 13,2021
+
+
 
 
 - Removing the transaction detail for each import is really a bad UX change. This feedback has been echoed by just about every client that we have using the bank feeds features (including Netsuite’s bank feed). It makes it really hard to understand what came in and debug if you think you’re seeing duplicates or things like that.
