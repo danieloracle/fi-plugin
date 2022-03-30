@@ -1,4 +1,4 @@
-require(['N/query'], function(query) {
+require(['N/query', 'N/record'], function(query, record) {
 
     var fiPluginQuery = query.create({
         type: query.Type.FI_CONNECTIVITY_PLUGIN
@@ -16,15 +16,14 @@ require(['N/query'], function(query) {
         })
     ];
 
-    
-
     fiPluginQuery.condition = fiPluginQuery.createCondition({
         fieldId: 'scriptid',
         operator: query.Operator.IS,
         values: 'customscript_fi_plugin_example'
     });
-    
     var results = fiPluginQuery.run().asMappedResults();
-    log.debug(results);
+    log.debug('fi plugin: ',results);
+    log.debug('fi plugin id', results[i].id);
+
 
 });

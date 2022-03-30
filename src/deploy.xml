@@ -5,6 +5,12 @@
     <objects>
         <path>~/Objects/*</path>
     </objects>
+    <run>
+   		<script>
+   			<path>~/Objects/customscript_fi_plugin_installation.xml</path>
+   			<deployment>customdeploy_fi_plugin_installation</deployment>
+   		</script>
+	</run>
     <translationimports>
         <path>~/Translations/*</path>
     </translationimports>

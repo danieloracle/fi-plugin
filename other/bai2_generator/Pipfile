@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+robotframework = "4.0.2"
+notebook = "*"
+robotkernel = "1.5.0"
+robotremoteserver = "*"
+uvicorn = "*"
+fastapi = "*"
+requests = "*"
+boto3 = "*"
+jupyter = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

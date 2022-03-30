@@ -14,8 +14,8 @@
         start: 0,
         end: 50
     });
-    log.debug(myResultSet);
-    log.debug(resultRange);
+    log.debug('myResultSet', myResultSet);
+    log.debug('resultRange', resultRange);
     for (var i = 0; i < resultRange.length; i++) {
         var createdFIRecord = record.load({
             type: record.Type.FINANCIAL_INSTITUTION,
@@ -29,7 +29,10 @@
                 fi_id =  resultRange[i].id;
         }
     }
-log.debug('fi_id');
-log.debug(fi_id);
+    log.debug('fi_id', fi_id);
+    if(fi_id == -1){
+        log.debug('create fi');
+    }
+
 
 });
