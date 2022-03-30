@@ -1,0 +1,18 @@
+<sdfinstallationscript scriptid="customscript_fi_plugin_installation">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>FI Plugin Installation</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>F</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteApps/com.netsuite.fiplugin/fi_plugin_installation.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_fi_plugin_installation">
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>RELEASED</status>
+      <title>FI Plugin Installation</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</sdfinstallationscript>
