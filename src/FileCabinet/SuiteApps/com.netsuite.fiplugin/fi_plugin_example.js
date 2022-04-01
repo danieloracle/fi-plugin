@@ -3,8 +3,8 @@
  * @NScriptType fiConnectivityPlugin
  * @NModuleScope SameAccount
  */
-define(['N/https', 'N/search', 'N/url'],
-    function (https, search, url)
+define(['N/https', 'N/url'],
+    function (https, url)
     {
         function getConfigurationIFrameUrl(context)
         {

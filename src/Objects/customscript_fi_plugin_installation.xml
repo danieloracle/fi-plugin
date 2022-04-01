@@ -6,7 +6,7 @@
   <notifyemails></notifyemails>
   <notifyowner>F</notifyowner>
   <notifyuser>F</notifyuser>
-  <scriptfile>[/SuiteApps/com.netsuite.fiplugin/fi_plugin_installation.js]</scriptfile>
+  <scriptfile>[/SuiteApps/com.netsuite.fiplugin/suiteapp_installation.js]</scriptfile>
   <scriptdeployments>
     <scriptdeployment scriptid="customdeploy_fi_plugin_installation">
       <isdeployed>T</isdeployed>
