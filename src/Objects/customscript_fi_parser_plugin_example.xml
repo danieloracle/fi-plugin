@@ -1,4 +1,4 @@
-<bankstatementparserplugin scriptid="customscript_fi_parser_plugin_example">
+<fiparserplugin scriptid="customscript_fi_parser_plugin_example">
   <description></description>
   <isinactive>F</isinactive>
   <loglevel>DEBUG</loglevel>
@@ -8,6 +8,6 @@
   <notifyowner>T</notifyowner>
   <notifyuser>F</notifyuser>
   <runasrole></runasrole>
-  <scriptfile>[/SuiteApps/com.netsuite.fiplugin/fi_parser_plugin_example4.js]</scriptfile>
+  <scriptfile>[/SuiteApps/com.netsuite.fiplugin/fi_parser_plugin_example.js]</scriptfile>
   <status>RELEASED</status>
-</bankstatementparserplugin>
+</fiparserplugin>

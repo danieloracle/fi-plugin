@@ -51,73 +51,13 @@ define(['N/https', 'N/search', 'N/url'],
                     log.debug("accountId", accountId);
                     log.debug("fromDateTime", fromDateTime);
                     log.debug("toDateTime", toDateTime);
+                    //Format the info as required to make the request
                 });
             }
 
             //Perform http request with context.accountRequestsJSON as the data payload or the requred format
-
-            // Example: json example
-            // ---------------------------            
-
-            var data = {
-                "accounts": [
-                    {
-                        "accountId": "9999999999",
-                        "employeeId": "EMPLOYEE1",
-                        "cardHolder": "Card Holder",
-                        "dataAsOfDate": "2020-07-01",
-                        "openingBalance": 0.0,
-                        "closingBalance": 100.0,
-                        "currentBalance": 100.0,
-                        "dueBalance": 100.0,
-                        "transactions": [
-                            {
-                                "date": "2020-07-01",
-                                "amount": 100.0,
-                                "transactionTypeCode": "CHARGE",
-                                "uniqueId": "TRN001",
-                                "id": "CHK001",
-                                "payee": "A Customer",
-                                "currency": "US",
-                                "memo": "Customer Credit",
-                                "transactionStatus": "Posted",
-                                "customerReferenceId": "CUST01",
-                                "invoiceReferenceIds": ["101", "102"],
-                                "billedTaxAmount": 10.0,
-                                "localChargeAmount": 100.0,
-                                "currencyExchangeRate": 1.0,
-                                "expenseCode": "CC"
-                            }
-                        ]
-                    }
-                ]
-            }
             
-            var downloadedData = JSON.stringify(data);
-            log.debug("downloadedData", downloadedData);
-            context.addDataChunk({dataChunk: downloadedData});
-            context.returnAccountRequestsJSON({accountsJson: context.accountRequestsJSON});
-
-
-            // // Example 1: CSV/json example
-            // // ---------------------------
-            // var downloadedData =
-            //     "TYPE;DATE;NAME;MEMO;AMOUNT\n"+
-            //     "CHECK;2017-04-13;Jessica L Sikes;;-1228.98\n" +
-            //     "CHECK;2017-04-13;Tom A Taylor;;-555.97";
-            //
-            // var accountRequests = JSON.parse(context.accountRequestsJSON);
-            // if (accountRequests != null) {
-            //     accountRequests.forEach(function (accountRequest) {
-            //         var accountId = accountRequest.accountMappingKey;
-            //         var fromDateTime = accountRequest.dataStartTime;
-            //         var toDateTime = accountRequest.dataEndTime;
-            //         log.debug("accountRequests.forEach", accountId + " - " + fromDateTime + " - " + toDateTime);
-            //         context.addDataChunk({dataChunk: downloadedData});
-            //     });
-            // }
-            
-            // Example 2: BAI2 file
+            // Example: BAI2 file
             // --------------------
             var downloadedData =
             "01,ORABANK,NETSUITE,220316,0945,fileid123,80,1,2/\n"+

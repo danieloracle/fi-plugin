@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_fi_parser_iframe_example">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>FI PARSER iFrame example</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>F</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteApps/com.netsuite.fiplugin/fi_parser_iframe_example.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_fi_parser_iframe_example">
+      <allemployees>T</allemployees>
+      <allpartners>T</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>T</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole></runasrole>
+      <status>RELEASED</status>
+      <title>FI PARSER IFrame example</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

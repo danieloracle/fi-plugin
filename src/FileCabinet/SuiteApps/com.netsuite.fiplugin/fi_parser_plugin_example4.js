@@ -72,6 +72,10 @@ define(['N/file', 'N/log'],
                         log.debug("error", error);
                         return false;
                     }
+
+
+
+                    
                 });
 
             },
@@ -83,11 +87,6 @@ define(['N/file', 'N/log'],
                     standardTransactionCode.tranCode = tranTypes[i];
                     standardTransactionCode.tranType = tranTypes[i];
                     context.output.addStandardTransactionCode({"standardTransactionCode":standardTransactionCode});
-
-                    // log.debug({
-                    //     title: 'Adding a new standard transaction code',
-                    //     details: standardTransactionCode
-                    // });
                 }
             }
         }
