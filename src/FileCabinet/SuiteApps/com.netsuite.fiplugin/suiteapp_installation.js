@@ -4,12 +4,12 @@
  */
 define(['N/record', 'N/search', 'N/query'], function(record, search, query) {
     function migrate(context) {	
-		var fi_name = 'Oracle Bank Scripted';
+		var fi_name = 'Oracle Bank SuiteApp';
 		var fi_description = 'Oracle Bank Scripted';
 		var fp_name = 'Oracle Bank Scripted';
 		var fp_description = 'Oracle Bank Scripted';
 		var fi_connectivity_plugin_id = 'customscript_fi_plugin_example';
-		var fi_parser_plugin_id = 'customscript_fi_plugin_example';
+		var fi_parser_plugin_id = 'customscript_fi_parser_plugin_example'; //var fi_parser_plugin_id = 'customscript_bsp_parser_bai2';
     
 		//Check if exists FINANCIAL_INSTITUTION
 		var fi_id = -1;
@@ -22,8 +22,6 @@ define(['N/record', 'N/search', 'N/query'], function(record, search, query) {
 			start: 0,
 			end: 50
 		});
-		log.debug('myResultSet', myResultSet);
-		log.debug('resultRange', resultRange);
 	    for (var i = 0; i < resultRange.length; i++) {
 			var createdFIRecord = record.load({
 				type: record.Type.FINANCIAL_INSTITUTION,
@@ -37,7 +35,7 @@ define(['N/record', 'N/search', 'N/query'], function(record, search, query) {
 					fi_id =  resultRange[i].id;
 			}
 		}
-		log.debug('fi_id', fi_id);
+
 		if(fi_id == -1){
         	log.debug('create fi');
         	// Create a financial institution record
@@ -99,11 +97,13 @@ define(['N/record', 'N/search', 'N/query'], function(record, search, query) {
 				})
 			];
 
+
 			fiPluginQuery.condition = fiPluginQuery.createCondition({
 				fieldId: 'scriptid',
 				operator: query.Operator.IS,
-				values: 'customscript_bsp_parser_bai2'
+				values: fi_parser_plugin_id
 			});
+
 			var results = fiPluginQuery.run().asMappedResults();
 			var fi_parser_plugin_id = results[0].id;
 			log.debug('fi_parser_plugin_id', fi_parser_plugin_id);
