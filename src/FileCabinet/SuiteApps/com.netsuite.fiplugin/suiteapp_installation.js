@@ -4,7 +4,7 @@
  */
 define(['N/record', 'N/search', 'N/query'], function(record, search, query) {
     function migrate(context) {	
-		var fi_name = 'Oracle Bank SuiteApp';
+		var fi_name = 'Oracle Bank Scripted';
 		var fi_description = 'Oracle Bank Scripted';
 		var fp_name = 'Oracle Bank Scripted';
 		var fp_description = 'Oracle Bank Scripted';
