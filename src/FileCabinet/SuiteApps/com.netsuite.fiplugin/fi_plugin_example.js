@@ -97,45 +97,7 @@ define(['N/https', 'N/url'],
             log.debug("downloadedData", downloadedData);
             context.addDataChunk({dataChunk: downloadedData});
             context.returnAccountRequestsJSON({accountsJson: context.accountRequestsJSON});
-
-
-            // // Example 1: CSV/json example
-            // // ---------------------------
-            // var downloadedData =
-            //     "TYPE;DATE;NAME;MEMO;AMOUNT\n"+
-            //     "CHECK;2017-04-13;Jessica L Sikes;;-1228.98\n" +
-            //     "CHECK;2017-04-13;Tom A Taylor;;-555.97";
-            //
-            // var accountRequests = JSON.parse(context.accountRequestsJSON);
-            // if (accountRequests != null) {
-            //     accountRequests.forEach(function (accountRequest) {
-            //         var accountId = accountRequest.accountMappingKey;
-            //         var fromDateTime = accountRequest.dataStartTime;
-            //         var toDateTime = accountRequest.dataEndTime;
-            //         log.debug("accountRequests.forEach", accountId + " - " + fromDateTime + " - " + toDateTime);
-            //         context.addDataChunk({dataChunk: downloadedData});
-            //     });
-            // }
             
-            // Example 2: BAI2 file
-            // --------------------
-            var downloadedData =
-            "01,ORABANK,NETSUITE,220316,0945,fileid123,80,1,2/\n"+
-            "02,cas72068,071000039,4,220316,0945,USD,/\n"+
-            "03,9999999999,USD/\n"+
-            "16,165,4444,,123345,,\n"+
-            "16,165,55555,,999902,,\n"+
-            "49,59999,4/\n"+
-            "03,000001,USD/\n"+
-            "16,165,11111,,11111,,\n"+
-            "16,165,12222,,12222,,\n"+
-            "49,23333,4/\n"+
-            "98,83332,2,10/\n"+
-            "99,83332,1,12/\n";
-            
-            log.debug("downloadedData", downloadedData);
-            context.addDataChunk({dataChunk: downloadedData});
-            context.returnAccountRequestsJSON({accountsJson: context.accountRequestsJSON});
         }
 
         return {
