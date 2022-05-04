@@ -1,10 +1,10 @@
 # Setup
 #### Customization > Plug-ins > Manage Plug-ins
 - Enable plugin
-![alt text](/src/FileCabinet/SuiteApps/com.netsuite.fiplugin/other/img/mp.png)
+![alt text](/other/img/mp.png)
 
 Setup > Accounting > Chats of Accounts
-![alt text](other/img/coa.png)
+![alt text](/other/img/coa.png)
 
 #### Setup > Accounting > Finantial Institution > List
 
@@ -12,10 +12,10 @@ Setup > Accounting > Chats of Accounts
 # Menues
 #### Transactions > Bank > Match Bank Data
 - Get transactions manualy
-![alt text](other/img/mbd.png)
+![alt text](/other/img/mbd.png)
 
 #### Transaction > Banks > Bank Import History
-![alt text](other/img/bih.png)
+![alt text](/other/img/bih.png)
 
 # Develop
 Customization > Plugins > Plugin implementations
