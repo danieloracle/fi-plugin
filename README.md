@@ -20,7 +20,3 @@ Setup > Accounting > Chats of Accounts
 # Develop
 Customization > Plugins > Plugin implementations
 - View > Excecution Log
-
-# Problems
-- 60 min limitation
-- automatic import scheduled time
