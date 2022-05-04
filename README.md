@@ -1,11 +1,7 @@
-# Problems
-- 60 min limitation
-- automatic import scheduled time
-
 # Setup
 #### Customization > Plug-ins > Manage Plug-ins
 - Enable plugin
-![alt text](other/img/mp.png)
+![alt text](/src/FileCabinet/SuiteApps/com.netsuite.fiplugin/other/img/mp.png)
 
 Setup > Accounting > Chats of Accounts
 ![alt text](other/img/coa.png)
@@ -24,3 +20,7 @@ Setup > Accounting > Chats of Accounts
 # Develop
 Customization > Plugins > Plugin implementations
 - View > Excecution Log
+
+# Problems
+- 60 min limitation
+- automatic import scheduled time
